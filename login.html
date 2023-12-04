@@ -16,27 +16,118 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.2s;
+    border: none;
 }
 a{
     text-decoration: none;
     color: inherit;
 }
+:root{
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --redhat: 'Red Hat Display', sans-serif;
+}
+
+button,
+button *,
+a,
+a *,
+input[type="file"],
+input[type="date"],
+input[type=radio],
+label {
+	cursor: pointer;
+}
+
+
 main{
     display: flex;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    font-family: var(--redhat);
 }
 .forms{
     height: 100%;
-    width: 35%;
+    width: 40%;
 }
 form{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 12%;
+    height: 100%;
+    padding-bottom: 100px;
+    align-items: center;
+    justify-content: center;
+}
+form h1{
+    font-size: 60px;
+    font-weight: 500;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+}
+form input{
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 0 25px;
+    font-size: 22px;
+    height: 50px;
+    background: none;
+    color: rgb(39, 39, 39);
+}
+.has-content{
+    transform: translateY(-200%);
+}
+form label{
+    position: absolute;
+    left: 25px;
+    z-index: -1;
+    font-size: 24px;
+    cursor: text;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(39, 39, 39);
+}
+form button{
+    font-size: 36px;
+    color: white;
+    background: var(--theme);
+    width: 55%;
+    height: 80px;
+}
+form button:hover{
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+form button:focus{
+    background-color: var(--contrast);
+}
+form p{
+    position: absolute;
+    bottom: 50px;
+    font-size: 24px;
+}
+form a{
+    color: var(--theme-shadow);
 }
 
+.image{
+    width: 65%;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
 
 </style>
 <body>
@@ -74,4 +165,16 @@ form{
         </section>
     </main>
 </body>
+<script>
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((element)=>{
+        element.addEventListener('input', (event) =>{
+            if(element.value.trim() !== ''){
+                element.parentNode.children[0].classList.add('has-content');
+            }else{
+                element.parentNode.children[0].classList.remove('has-content');
+            }
+        })
+    })
+</script>
 </html>
