@@ -42,6 +42,17 @@ label {
 	cursor: pointer;
 }
 
+@keyframes appearingRight {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 
 main{
     display: flex;
@@ -121,6 +132,9 @@ form a{
 
 .image{
     width: 65%;
+    animation-name: appearingRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 .image img{
     width: 100%;
@@ -138,10 +152,10 @@ form a{
                     Login
                 </h1>
                 <div>
-                    <label for="email">
+                    <label for="name">
                         usuario
                     </label>
-                    <input type="text" name="email" name="email">
+                    <input type="text" name="name" name="name">
                 </div>
                 <div>
                     <label for="senha">
@@ -154,7 +168,7 @@ form a{
                 </button>
                 <p>
                     Não tem conta? 
-                    <a href="/auth/registrar">
+                    <a href="register.html">
                         Registrar-se
                     </a>
                 </p>
