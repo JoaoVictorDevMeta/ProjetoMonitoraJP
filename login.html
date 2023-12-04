@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitora JP | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.forms{
+    height: 100%;
+    width: 35%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+</style>
+<body>
+    <main>
+        <section class="forms">
+            <form action="/api/log-in">
+                <h1>
+                    Login
+                </h1>
+                <div>
+                    <label for="email">
+                        usuario
+                    </label>
+                    <input type="text" name="email" name="email">
+                </div>
+                <div>
+                    <label for="senha">
+                        senha
+                    </label>
+                    <input type="text" name="senha" name="senha">
+                </div>
+                <button type="submit">
+                    Logar
+                </button>
+                <p>
+                    Não tem conta? 
+                    <a href="/auth/registrar">
+                        Registrar-se
+                    </a>
+                </p>
+            </form>
+        </section>  
+        <section class="image">
+            <img src="./loginBack.png" alt="">
+        </section>
+    </main>
+</body>
+</html>
