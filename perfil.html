@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitora JP | Sua conta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: var(--redhat);
+}
+
+:root{
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --redhat: 'Red Hat Display', sans-serif;
+}
+
+nav {
+  margin-bottom: 30px;
+  padding: 35px;
+  height: 60px;
+  width: 100%;
+  background: var(--theme-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > div > button > a {
+  color: white;
+  text-decoration: none;
+  background: none;
+  font-size: 1.15rem;
+}
+nav > div {
+  display: flex;
+  gap: 60px;
+}
+nav > div > button {
+  background: none;
+}
+
+.acoes {
+  display: flex;
+  gap: 15px;
+  height: 300px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 5px;
+  gap: 15px;
+  align-items: center;
+  display: flex;
+  width: 1200px;
+  height: 100%;
+  background: whitesmoke;
+}
+
+.card-desc {
+  width: 100%;
+  height: 90%;
+}
+
+.card-btn > button > a {
+  font-size: 1.4rem;
+}
+
+.card-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 1200px;
+}
+
+#actions {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#estatisticas {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#estatisticas > div {
+}
+
+</style>
+<body>
+  <header>
+    <nav>
+      <div>
+        <button>
+          <a href="#">Inicio</a>
+        </button>
+        <button>
+          <a href="#">Regiões</a>
+        </button>
+        <button>
+          <a href="#">Denuncias</a>
+        </button>
+      </div>
+      <div>
+        <button>
+          <a href="#">Login</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="acoes">
+        <div class="card">
+          <img src="https://www.polemicaparaiba.com.br/wp-content/uploads/2018/11/emerson-machado.jpg" width="" height="90%">
+          <div class="card-desc">
+            <h3>Emerson Machado</h3>
+            <p><b>Endereço:</b> Av. Primeiro de Maio, 720 – Jaguaribe - João Pessoa/PB</p>
+            <p><b>CPF:</b> 123.456.789-10</p>
+            <p><b>E-mail:</b> machado.ifpb.edu.br</p>
+            <p><b>Telefone:</b> 83 91234-9823</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="actions">
+      <div class="card-btn">
+        <button><a>Nova denuncia</a></button>
+        <button><a>Abrir ticket</a></button>
+        <button><a>Mudar senha</a></button>
+      </div>
+    </section>
+    <section id="estatisticas">
+      <div>
+        <p>Denuncias feitas: 30</p>
+      </div>
+      <div>
+        <p>Denuncias feitas: 30</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
