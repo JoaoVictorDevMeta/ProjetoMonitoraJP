@@ -1,111 +1,153 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitora JP | Sua conta</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitora JP | Sua conta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap"
+    rel="stylesheet">
 </head>
 <style>
-
-*{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
     font-family: var(--redhat);
-}
+  }
 
-:root{
+  :root {
     --theme-shadow: #0C356A;
     --theme: #0174BE;
     --theme-light: #8AC0E3;
     --contrast: #FFC436;
     --light: #FFF0CE;
     --redhat: 'Red Hat Display', sans-serif;
-}
+  }
 
-nav {
-  margin-bottom: 30px;
-  padding: 35px;
-  height: 60px;
-  width: 100%;
-  background: var(--theme-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  nav {
+    margin-bottom: 30px;
+    padding: 35px;
+    height: 60px;
+    width: 100%;
+    background: var(--theme-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-nav > div > button > a {
-  color: white;
-  text-decoration: none;
-  background: none;
-  font-size: 1.15rem;
-}
-nav > div {
-  display: flex;
-  gap: 60px;
-}
-nav > div > button {
-  background: none;
-}
+  nav>div>button>a {
+    color: white;
+    text-decoration: none;
+    background: none;
+    font-size: 1.15rem;
+  }
 
-.acoes {
-  display: flex;
-  gap: 15px;
-  height: 300px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
+  nav>div {
+    display: flex;
+    gap: 60px;
+  }
 
-.card {
-  padding: 5px;
-  gap: 15px;
-  align-items: center;
-  display: flex;
-  width: 1200px;
-  height: 100%;
-  background: whitesmoke;
-}
+  nav>div>button {
+    background: none;
+  }
 
-.card-desc {
-  width: 100%;
-  height: 90%;
-}
+  .acoes {
+    display: flex;
+    gap: 15px;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 
-.card-btn > button > a {
-  font-size: 1.4rem;
-}
+  .card {
+    padding: 5px;
+    gap: 15px;
+    align-items: center;
+    display: flex;
+    width: 1500px;
+    height: 100%;
+    background: whitesmoke;
+  }
 
-.card-btn {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 1200px;
-}
+  .card-desc {
+    width: 100%;
+    height: 90%;
+  }
+  .card-btn > button {
+    cursor: pointer;
+    background:  #8AC0E3;
+  }
+  .card-btn>button>a {
+    font-size: 1.4rem;
+  }
 
-#actions {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-  align-items: center;
-}
+  .card-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1500px;
+  }
 
-#estatisticas {
-  display: flex;
-  margin-top: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  #actions {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
 
-#estatisticas > div {
-}
+  .card-desc > p {
+    font-size: 19px;
+  }
 
+  #estatisticas {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #estatisticas > div > div {
+    width: 100%;
+    border-bottom: 3px solid black;
+  }
+
+  #estatisticas {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+  #estatisticas > div > div > div > p {
+    font-size: 20px;
+  }
+  #estatisticas > div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 1500px;
+    justify-content: space-between;
+  }
+
+  #not > div {
+    width: 100%;
+    background: rgb(241, 119, 119);
+    margin-bottom: 3px;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  #not > div > p {
+    font-size: 20px;
+  }
 </style>
+
 <body>
   <header>
     <nav>
@@ -131,9 +173,10 @@ nav > div > button {
     <section>
       <div class="acoes">
         <div class="card">
-          <img src="https://www.polemicaparaiba.com.br/wp-content/uploads/2018/11/emerson-machado.jpg" width="" height="90%">
+          <img src="https://www.polemicaparaiba.com.br/wp-content/uploads/2018/11/emerson-machado.jpg" width=""
+            height="90%">
           <div class="card-desc">
-            <h3>Emerson Machado</h3>
+            <h2>Emerson Machado</h2>
             <p><b>Endereço:</b> Av. Primeiro de Maio, 720 – Jaguaribe - João Pessoa/PB</p>
             <p><b>CPF:</b> 123.456.789-10</p>
             <p><b>E-mail:</b> machado.ifpb.edu.br</p>
@@ -151,12 +194,33 @@ nav > div > button {
     </section>
     <section id="estatisticas">
       <div>
-        <p>Denuncias feitas: 30</p>
-      </div>
-      <div>
-        <p>Denuncias feitas: 30</p>
-      </div>
+        <div>
+          <h3>Estatisticas</h3>
+          <div>
+            <p>Denuncias feitas: 30</p>
+          </div>
+          <div>
+            <p>Denuncias feitas: 25</p>
+          </div>
+          <div>
+            <p>Denuncias em aberto: 5</p>
+          </div>
+        </div>
+        <div id="not">
+          <h3>Notificações</h3>
+          <div>
+            <p>Sua denuncia id 512 foi concluida.</p>
+          </div>
+          <div>
+            <p>Sua denuncia id 512 foi criada.</p>
+          </div>
+          <div>
+            <p>Possivel falta de energia na sua região.</p>
+          </div>
+        </div>
+        </div>
     </section>
   </main>
 </body>
+
 </html>
