@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorei JP | Buscando</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+:root{
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --redhat: 'Red Hat Display', sans-serif;
+}
+
+button,
+button *,
+a,
+a *,
+input[type="file"],
+input[type="date"],
+input[type=radio],
+label {
+	cursor: pointer;
+}
+
+nav {
+    padding: 35px;
+    height: 60px;
+    width: 100%;
+    background: var(--theme-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+nav>div>button>a {
+    color: white;
+    text-decoration: none;
+    background: none;
+    font-size: 1.15rem;
+}
+
+nav>div {
+    display: flex;
+    gap: 60px;
+}
+
+nav>div>button {
+    background: none;
+}
+
+
+.search {
+    background-color: #F4F4F4;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.search>div{
+    padding: 40px 150px 20px;
+    font-family: var(--redhat);
+}
+.search>div>h1{
+    padding-bottom: 40px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.search>div>p{
+    font-size: 18px;
+    font-weight: 200;
+}
+.search>form{
+    display: flex;
+    justify-content: center;
+}
+.search>form input{
+    width: 80%;
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--theme-shadow);
+    padding: 17px 30px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+.search>form button{
+    width: 55px;
+    display: flex;
+    background: var(--theme);
+    background: linear-gradient(to left, var(--theme) 50%, var(--theme-shadow) 50%) right;
+    background-size: 200%;
+    padding: 14px;
+}
+.search>form button:hover{
+    background-position: left;
+}
+.search>form img{
+    width: 100%;
+}
+
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-container .result-p {
+    font-size: 20px;
+    padding: 20px 150px;
+    font-weight: 800;
+    font-family: var(--redhat);
+    border-bottom: 1px solid;
+}
+.search-container .container-result{
+    width: 60%;
+    max-width: 900px;
+    min-width: 600px;
+    padding-top: 20px;
+    font-family: var(--redhat);
+}
+.result:not(:last-child){
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--contrast);
+}
+.result h3{
+    padding-top: 10px;
+    font-weight: 500;
+}
+.result p{
+    padding: 20px;
+}
+.result a{
+    color: var(--theme-shadow);
+    font-size: 20px;
+    padding: 5px 25px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: linear-gradient(to left, white 50%, var(--theme-shadow) 50%) right;
+    background-size: 200%;
+    transition: 0.4s;
+}
+.result a:hover{
+    color: white;
+    background-position: left;
+}
+.pagination{
+    width: 60%;
+    display: flex;
+    justify-content: end;
+    padding: 40px 20px 60px;
+}
+.pagination ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.pagination a{
+    font-size: 24px;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-family: var(--redhat);
+    font-weight: 500;
+}
+.pagination a:hover{
+    box-shadow: 0px 0px 5px var(--theme);
+}
+.pagination #selected a{
+    background: var(--theme-shadow);
+    color: white;
+}
+
+footer{
+    height: 40vh;
+    background-color: rgb(49, 49, 49);
+}
+</style>
+<body>
+    <header>
+        <nav>
+          <div>
+            <button>
+              <a href="#">Inicio</a>
+            </button>
+            <button>
+              <a href="#">Regiões</a>
+            </button>
+            <button>
+              <a href="#">Denuncias</a>
+            </button>
+          </div>
+          <div>
+            <button>
+              <a href="#">Login</a>
+            </button>
+          </div>
+        </nav>
+      </header>
+    <main>
+        <section class="search">
+            <div>
+                <h1>
+                    Buscar Denuncias
+                </h1>
+                <p>
+                    Digite abaixo o bairro, rua ou problema que deseja buscar
+                </p>
+            </div>
+            <form action="">
+                <input type="text" name="search" id="search">
+                <button type="submit"><img src="buscalupa.svg" alt=""></button>
+            </form>
+        </section>
+        <section class="search-container">
+            <p class="result-p">
+                Exibindo 35 resultados para “Problema no poste de  luz ...
+            </p>
+            <div class="container-result">
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+                <div class="result">
+                    <h2>
+                        Prefeitura de João Pessoa NÃO investe em nova iluminação e leva conforto e mais segurança aos bairros
+                    </h2>
+                    <h3>
+                        R. Eilzo Afonso Marquês de Carvalho, 153 - Água Fria
+                    </h3>
+                    <p>
+                        Criado para modernizar o parque de iluminação pública da cidade, levando iluminação mais eficiente, o programa 'LED nas Ruas', implantado pela Prefeitura Municipal de João Pessoa (PMJP), mudou a realidade dos bairros ...
+                    </p>
+                    <a href="#">Acessar Denuncia</a>
+                </div>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li id="selected"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">>></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
