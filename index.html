@@ -1,0 +1,304 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitora JP | Página inicial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: var(--redhat);
+  }
+
+  :root {
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --redhat: 'Red Hat Display', sans-serif;
+  }
+
+  nav {
+    padding: 35px;
+    height: 60px;
+    width: 100%;
+    background: var(--theme-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav>div>button>a {
+    color: white;
+    text-decoration: none;
+    background: none;
+    font-size: 1.15rem;
+  }
+
+  nav>div {
+    display: flex;
+    gap: 60px;
+  }
+
+  nav>div>button {
+    background: none;
+  }
+
+  #body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  #body > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner > div > p {
+    font-size: larger;
+  }
+  .banner > div > h1 {
+    font-size: xxx-large;
+  }
+  .banner > div > * {
+    color: white;
+  }
+  .banner > div {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(50%) sepia(7.5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .banner {
+    width: 100%;
+    height: 500px;
+    background: red;
+    background: url(https://as1.ftcdn.net/v2/jpg/02/50/55/12/1000_F_250551255_DalLpvXfUmCZjmRvndYn7nfIp1cFLOpP.jpg), no-repeat;
+    background-size: cover;
+  }
+  .content > div {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    width: 1200px !important;
+    margin-top: 30px;
+  }
+
+  .stepper-wrapper {
+    width: 1200px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+#depoimentos > div {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    border-radius: 15px;
+    gap: 15px;
+    padding: 15px;
+}
+#depoimentos {
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div>
+        <button>
+          <a href="#">Inicio</a>
+        </button>
+        <button>
+          <a href="#">Regiões</a>
+        </button>
+        <button>
+          <a href="#">Denuncias</a>
+        </button>
+      </div>
+      <div>
+        <button>
+          <a href="#">Login</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="body">
+        <div class="banner">
+            <div>
+                <h1>Monitora João Pessoa</h1>
+                <p>Denuncie problemas na iluminação pública e ajude a iluminar o caminho para um ambiente mais seguro e acolhedor para todos.</p>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <h2>Sobre o site</h2>
+                <p>Este site foi desenvolvido com o objetivo de melhorar a qualidade de vida da cidade de joão Pessoa através de denuncias</p>
+            </div>
+            <div>
+                <h2>Veja como funciona as denuncias</h2>
+                <div class="stepper-wrapper">
+                    <div class="stepper-item">
+                      <div class="step-counter">1</div>
+                      <div class="step-name">Registre-se</div>
+                    </div>
+                    <div class="stepper-item">
+                      <div class="step-counter">2</div>
+                      <div class="step-name">Denuncie</div>
+                    </div>
+                    <div class="stepper-item">
+                      <div class="step-counter">3</div>
+                      <div class="step-name">Aguarde</div>
+                    </div>
+                    <div class="stepper-item">
+                      <div class="step-counter">4</div>
+                      <div class="step-name">Comemore!</div>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <h2>Depoimentos</h2>
+                <div id="depoimentos">
+                    <div>
+                        <img src="https://i0.wp.com/parlamentopb.com.br/wp-content/uploads/2020/12/Cicero-30.png?fit=438%2C363&ssl=1" width="64px" height="64px">
+                        <div>
+                            <h3>Cicero Lucena</h3>
+                            <p>Depois que meu bairro começou a usar o Monitora João Pessoa nunca mais vi um poste apagado!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://www.ifpb.edu.br/noticias/2018/02/ifpb-registra-aumento-no-numero-de-pedidos-de-patentes-em-2017/diretor-de-inovacao-tecnologica-do-ifpb-maxwell-amaral.jpg" width="64px" height="64px">
+                        <div>
+                            <h3>Maxwell</h3>
+                            <p>Antes eu tinha até medo de andar na rua, mas depois do monitora João Pessoa eu saio até de olhos fechados!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://segredosdomundo.r7.com/wp-content/uploads/2022/02/as-pessoas-mais-famosas-do-mundo-de-hoje-e-da-historia-5.jpg" width="64px" height="64px">
+                        <div>
+                            <h3>Mauricio</h3>
+                            <p>O Monitora João Pessoa é uma idea revolucionaria, nunca vi algo parecido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <h2>Patrocinadores</h2>
+                <div style="width: 1200px; display: flex; justify-content: center; gap: 30px;">
+                    <img src="https://www.joaopessoa.pb.gov.br/wp-content/uploads/logos/logomarca-pmjp-color-h-one.png" height="100px">
+                    <img src="https://www.ifpb.edu.br/prpipg/pasta-imagens-da-prpipg/logoifpb.png"  height="100px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Energisa.svg/1200px-Energisa.svg.png"  height="100px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="background: var(--theme); margin-top: 90px; width: 100%; height: 100px; display: flex; justify-content: center; align-items: center;">
+        <p style="color: white; font-size: 20px;">Todos os direitos reservados a Os calabresos</p>
+    </footer>
+  </main>
+</body>
+
+</html>
