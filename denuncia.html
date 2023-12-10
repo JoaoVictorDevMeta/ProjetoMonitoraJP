@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitora JP | denuncia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+:root{
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --dark: #252525;
+    --redhat: 'Red Hat Display', sans-serif;
+}
+
+button,
+button *,
+a,
+a *,
+input[type="file"],
+input[type="date"],
+input[type=radio],
+label {
+	cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+
+nav {
+    margin-bottom: 30px;
+    padding: 35px 100px;
+    height: 13vh;
+    width: 100%;
+    background: var(--theme-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > div > button > a {
+    color: white;
+    text-decoration: none;
+    background: none;
+    font-size: 1.55rem;
+    font-family: var(--redhat);
+}
+nav > div > button > a:hover{
+    opacity: 0.7;
+}
+nav > div {
+    display: flex;
+    gap: 60px;
+}
+nav > div > button {
+    background: none;
+}
+
+header {
+    width: 100%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 50px 80px;
+}
+
+
+.container{
+    width: 75%;
+}
+.container > .title {
+    border-bottom: 2px solid;
+}
+.container > .title > h1{
+    font-size: 44px;
+    font-family: var(--redhat);
+    font-weight: 500;
+}
+.container > .title > ul{
+    display: flex;
+    gap: 60px;
+    padding: 40px 0px 30px;
+}
+.container > .title li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.container > .title li:hover{
+    scale: 1.2;
+}
+#elem1{
+    background-color: var(--theme);
+}
+#elem2{
+    background-color: var(--theme-shadow);
+}
+#elem3{
+    background-color: var(--theme-light);
+}
+
+.container{
+    font-family: var(--redhat);
+}
+.container > .content{
+    padding: 40px 7% 70px;
+}
+.container > .content > .imagem{
+    padding-bottom: 40px;
+}
+.container > .content img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.container > .content > .text > h3{
+    font-size: 28px;
+    font-weight: 500;
+}
+.container > .content > .text > p{
+    font-size: 22px;
+    text-align: justify;
+    padding: 35px 0px 50px;
+    font-weight: 200;
+}
+.container > .content > .autor h3{
+    font-size: 22px;
+}
+.container > .content > .autor h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: gray;
+}
+.container > .organization h2{
+    font-size: 44px;
+    font-weight: 400;
+}
+.container > .organization ul{
+    display: flex;
+    padding: 30px;
+    gap: 80px;
+    font-size: 24px;
+    color: var(--theme-shadow);
+    font-weight: 500;
+}
+
+
+footer{
+    height: 40vh;
+    width: 100%;
+    background-color: var(--dark);
+    font-family: var(--redhat);
+    font-size: 18px;
+    color: white;
+}
+footer .top{
+    height: 33vh;
+    border-bottom: 2px solid white;
+    width: 92%;
+    margin-left: 4%;
+}
+footer .bottom{
+    display: flex;
+    padding: 10px 80px;
+    width: 100%;
+}
+footer .bottom > div{
+    position: absolute;
+    right: 80px;
+}
+footer .bottom a:first-child{
+    padding-right: 30px;
+}
+footer .bottom a{
+    font-weight: 500;
+}
+footer .bottom a:hover{
+    opacity: 0.7;
+}
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div>
+              <button>
+                    <a href="#">Inicio</a>
+                </button>
+                <button>
+                    <a href="#">Regiões</a>
+                </button>
+                <button>
+                    <a href="#">Denuncias</a>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <a href="#">Login</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h1>
+                    Falta de iluminação pública em Mumbaba
+                </h1>
+                <ul>
+                    <li id="elem1">
+
+                    </li>
+                    <li id="elem2">
+
+                    </li>
+                    <li id="elem3">
+
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="imagem">
+                    <img src="denunciaExemp.png" alt="Denuncia-Imagem">
+                    <p>Foto por Adriana Carlo</p>
+                </div>
+                <div class="text">
+                    <h3>
+                        Rua Mário de Miranda vilas boas, 82. Casa-80
+                    </h3>
+                    <p>
+                        Moro na rua Mário de Miranda vilas boas, 82. Casa-80. Gostaria de saber qual é o objetivo de vir cobrando na minha UC a taxa de iluminação pública; se desde de janeiro na rua que moro só tem um poste com uma lâmpada vervelha e nos arredores até uns 2 km para dureita, para esquerda, para cima e para baixo. Em todos os eixos, sempre no escuro. Qual seria a vantagem que eu como cidadã, pagar essa taxa de iluminação pública. Peço que não cobre essa taxa até que eu tenha o serviço.                       
+                    </p>
+                </div>
+                <div class="autor">
+                    <h3>
+                        Publicado por Adriana Carlo
+                    </h3>
+                    <h3>
+                        24/11/2023
+                    </h3>
+                    <h4>
+                        Editado em 27/11/2023
+                    </h4>
+                </div>
+            </div>
+            <div class="organization">
+                <h2>
+                    Órgãos Responsáveis
+                </h2>
+                <ul>
+                    <li>
+                        SEINFRA
+                    </li>
+                    <li>
+                        SEINFRA
+                    </li>
+                    <li>
+                        SEINFRA
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="top">
+            <div>
+                <h1>
+                    Monitorei JP
+                </h1>
+                <p>
+
+                </p>
+            </div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="bottom">
+            <p>2023 MonitoreiJP, Divulgação de denuncias. João Pessoa, Paraíba. Todos os Direitos Reservados</p>
+            <div>
+                <a href="#">Politica de Privacidade</a>
+                <a href="#">Termos de uso</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
