@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorei JP | Admin Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<style>
+*{
+    font-family: var(--redhat);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+:root{
+    --theme-shadow: #0C356A;
+    --theme: #0174BE;
+    --theme-light: #8AC0E3;
+    --contrast: #FFC436;
+    --light: #FFF0CE;
+    --redhat: 'Red Hat Display', sans-serif;
+}
+
+button,
+button *,
+a,
+a *,
+input[type="file"],
+input[type="date"],
+input[type=radio],
+label {
+	cursor: pointer;
+}
+
+nav {
+    padding: 35px;
+    height: 60px;
+    width: 100%;
+    background: var(--theme-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+nav>div>button>a {
+    color: white;
+    text-decoration: none;
+    background: none;
+    font-size: 1.15rem;
+}
+
+nav>div {
+    display: flex;
+    gap: 60px;
+}
+
+nav>div>button {
+    background: none;
+}
+
+footer{
+    height: 40vh;
+    background-color: rgb(49, 49, 49);
+}
+
+.acoes {
+    display: flex;
+    gap: 15px;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 5px;
+    gap: 15px;
+    align-items: center;
+    display: flex;
+    width: 1500px;
+    height: 100%;
+    background: whitesmoke;
+  }
+
+  .card-desc {
+    width: 100%;
+    height: 90%;
+  }
+  .card-btn > button {
+    cursor: pointer;
+    background:  #8AC0E3;
+  }
+  .card-btn>button>a {
+    font-size: 1.4rem;
+  }
+
+  .card-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1500px;
+  }
+
+  #actions {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-desc > p {
+    font-size: 19px;
+  }
+</style>
+<body>
+    <header>
+        <nav>
+            <div>
+              <button>
+                <a href="/">Inicio</a>
+              </button>
+              <button>
+                <a href="/busca.html">Denuncias</a>
+              </button>
+            </div>
+            <div>
+              <button>
+                <a href="/login.html">João Victor</a>
+              </button>
+            </div>
+          </nav>
+      </header>
+    <main>
+        <section>
+            <div class="acoes">
+              <div class="card">
+                <img src="https://wallpapers.com/images/hd/basic-default-pfp-pxi77qv5o0zuz8j3.jpg" width=""
+                  height="90%">
+                <div class="card-desc">
+                  <h2>João Victor (Admin)</h2>
+                  <p><b>Endereço:</b> Av. Segundo de Maio, 720 – Jaguaribe - João Pessoa/PB</p>
+                  <p><b>CPF:</b> 123.456.789-11</p>
+                  <p><b>E-mail:</b> joao@ifpb.edu.br</p>
+                  <p><b>Telefone:</b> 83 71234-9823</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="actions">
+            <div class="card-btn">
+              <button><a>Ver tickets</a></button>
+              <button><a>Notificar Usuarios</a></button>
+              <button><a>Ver denuncias</a></button>
+            </div>
+          </section>
+    </main>
+    <footer style="background: var(--theme); margin-top: 400px; width: 100%; height: 100px; display: flex; justify-content: center; align-items: center;">
+        <p style="color: white; font-size: 20px;">Todos os direitos reservados a Os calabresos</p>
+    </footer>
+</body>
+</html>
